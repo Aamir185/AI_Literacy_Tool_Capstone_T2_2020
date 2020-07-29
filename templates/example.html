@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+{% load static %}
+
+<html>
+	<head>
+		<title>SURROUND AI</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href={%static "assets/css/box.css" %}/>
+		<link rel="stylesheet" href={%static "assets/css/pop.css" %}/>
+		<style>
+			#div1 {
+						  width: 300px;
+						  height: 300px;
+						  padding: 10px;
+						  border: 1px solid #aaaaaa;
+						}
+		</style>
+
+	</head>
+	<body>
+
+		<h1 style="font-family:arial; text-align: center; color: black; font-size:40px;">LET'S LEARN AND PLAY</h1>
+		</header>
+
+		<!-- Banner -->
+			
+				<div class="inner">
+				 	<div class="centerflipcards">
+	<div class="square-flip">
+		<div class='square' data-image={%static "image" %} style="background-color:#d77fa1;">
+			<div class="square-container">
+				<div class="align-center"><img src={%static "images/" %} class="boxshadow" style="height:500px;width:500px;" alt=""></div>
+				<h2 class="textshadow">Age Detection</h2>
+				<h3 class="textshadow">Detect the age from images</h3>
+			</div>
+			<div class="flip-overlay"></div>
+		</div>
+		<div class='square2' data-image={%static "images/1a.jpg" %}>
+			<div class="square-container2">
+				
+				<a href="#popup1" class="boxshadow kallyas-button" class="box bg-1">Lets Go!!!</a>
+			</div>
+			<div class="flip-overlay"></div>
+			
+		</div>
+		
+	</div>
+	<div class="square-flip">
+		<div class='square' data-image={%static "image" %} style="background-color:#698474">
+			<div class="square-container">
+				<div class="align-center"><img src={%static "images/b" %} class="boxshadow" alt=""></div>
+				<h2 class="textshadow">Geometric Equations</h2>
+				<h2 class="textshadow">Teach the machine various equations</h2>
+			</div>
+			<div class="flip-overlay"></div>
+		</div>
+		<div class='square2' data-image={%static "images/2a.jpg" %}>
+			<div class="square-container2">
+				<div class="align-center"></div>
+				
+				<a href="#popup2" class="boxshadow kallyas-button">Lets GO!!!</a>
+					
+			</div>
+			<div class="flip-overlay"></div>
+		</div>
+	</div>
+	<div class="square-flip">
+		<div class='square' data-image={%static "image" %} style="background-color:#6ba8a9">
+			<div class="square-container">
+				<div class="align-center"><img src={%static "images/b" %} class="boxshadow" alt=""></div>
+				<h2 class="textshadow">Arithemetic Operations</h2>
+				<h2 class="textshadow">Teach the machine to do addition and subtraction</h2>
+			</div>
+			<div class="flip-overlay"></div>
+		</div>
+		<div class='square2' data-image={%static "images/3a.jpg" %}>
+			<div class="square-container2">
+				<div class="align-center"></div>
+				<a href="#popup3" class="boxshadow kallyas-button">View Demo</a>
+			</div>
+			<div class="flip-overlay"></div>
+		</div>
+	</div>
+
+<div class="square-flip">
+		<div class='square' data-image={%static "image" %} style="background-color:#ff5151">
+			<div class="square-container">
+				<div class="align-center"><img src={%static "images/b" %} class="boxshadow" alt=""></div>
+				<h2 class="textshadow">?</h2>
+				<h2 class="textshadow">.......</h2>
+			</div>
+			<div class="flip-overlay"></div>
+		</div>
+		<div class='square2' data-image={%static "images/4a.jpg" %}>
+			<div class="square-container2">
+				<div class="align-center"></div>
+				<a href="#popup4" class="boxshadow kallyas-button">View Demo</a>
+			</div>
+			<div class="flip-overlay"></div>
+		</div>
+	</div>
+
+	<div class="square-flip">
+		<div class='square' data-image="http://titanicthemes.com/files/flipbox/kallyas-bundle.png" style="background-color:#8cba51">
+			<div class="square-container">
+				<div class="align-center"><img src={%static "images/b" class="boxshadow" %} alt=""></div>
+				<h2 class="textshadow">?</h2>
+				<h2 class="textshadow">........</h2>
+			</div>
+			<div class="flip-overlay"></div>
+		</div>
+		<div class='square2' data-image={%static "images/1a.jpg" %}>
+			<div class="square-container2">
+				<div class="align-center"></div>
+				<a href="#popup5"  class="boxshadow kallyas-button">View Demos</a>
+			</div>
+			<div class="flip-overlay"></div>
+		</div>
+	</div>
+
+	<div class="square-flip">
+		<div class='square' data-image="" style="background-color:#50d890">
+			<div class="square-container">
+				<div class="align-center"><img src="http://titanicthemes.com/files/flipbox/kallyas.png" class="boxshadow" alt=""></div>
+				<h2 class="textshadow">?</h2>
+				<h2 class="textshadow">........</h2>
+				
+			</div>
+			<div class="flip-overlay"></div>
+		</div>
+		<div class='square2' data-image={%static "images/2a.jpg" %}>
+			<div class="square-container2">
+				<div class="align-center"></div>
+				<a href="#popup6" target="_blank" class="boxshadow kallyas-button">View Demos</a>
+			</div>
+			<div class="flip-overlay"></div>
+		</div>
+	</div>
+  
+  <br/>
+  <br/>
+  <br/>
+  
+</div>
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2 id="elements">Age Detection</h2>
+		<a class="close" href="#">&times;</a>
+			<div class="header">
+				<h3>1:</h3><img draggable="true" id="1" style="height:200px;width:200px;" ondragstart="drag(event)" src={%static "images/kid1.jpg" %} >
+				<h3>2:</h3><img draggable="true" id="2" style="height:200px;width:200px;" ondragstart="drag(event)" src={%static "images/girl1.jpg" %} >
+				<h3>3:</h3><img draggable="true" id="2" style="height:200px;width:200px;" ondragstart="drag(event)" src={%static "images/man1.jpg" %} >
+			</div><br>
+				&emsp;<form method="GET" style="margin-left: 40%;margin-right: 40%;margin-top: 10%;margin-bottom: 5%">
+					<input type="text" name="age" id="id_q"  >
+					<button type="submit">send</button>
+					<!--<div id="dropContainer" style="border:1px solid black;height:100px;">
+					Drop Here
+					</div>-->
+					<!--<p>Drag the W3Schools image into the rectangle:</p>
+
+					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+					<br>-->
+
+
+					{%if ageresult == 1 %}
+					<h3>Result: </h3><img style="height:250px;width:250px" src={%static "images/file.jpg" %} >
+					{% endif %}
+				</form>
+		</div>
+	</div>
+</div>
+<div id="popup2" class="overlay">
+	<div class="popup">
+		<h2>Geometric Eqautoins</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<div class="row 200%">
+				<div class="6u 12u$(medium)">
+					<div id="line" class="tabcontent">
+				<p>Surround AI example 1. Line</p>
+					<form method="GET" style="margin-left: 40%;margin-right: 40%;margin-top: 10%;margin-bottom: 5%">
+					<input type="text" name="q1" id="id_q" placeholder="X " >
+					<button type="submit">send</button>
+					</form>
+					</div>
+
+					<div id="circle" class="tabcontent">
+
+					  <p>Surround AI example 2. circle</p>
+						<form method="GET" style="margin-left: 40%;margin-right: 40%;margin-top: 10%;margin-bottom: 5%">
+							<input type="text" name="x" id="id_q" placeholder="X" >
+							<input type="text" name="y" id="id_q" placeholder="Y" >
+							<button type="submit">send</button>
+						</form>
+					</div>
+
+					<div id="square" class="tabcontent">
+
+					  <p>Surround AI example 3. squre</p>
+						<form method="GET" style="margin-left: 40%;margin-right: 40%;margin-top: 10%;margin-bottom: 5%">
+							<input type="text" name="a" id="id_q" placeholder="X " >
+							<input type="text" name="b" id="id_q" placeholder="Y " >
+							<button type="submit">send</button>
+						</form>
+						{%if flagL %}
+					<h3>{{flagL}}</h3><img src={%static "images/Gout.png" %} id="1" style="height:250px;width:250px">
+					{% endif %}
+
+						{%if flag %}
+					<h3>Your point is {{flag}}</h3><img src={%static "images/Gout.png" %} id="1" style="height:250px;width:250px">
+					{% endif %}
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="popup3" class="overlay">
+	<div class="popup">
+		<h2>Arithemetic Operations</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<div class="row 100%">
+				<div class="6u 12u$(medium)">
+					<div id="line" class="tabcontent">
+						<p>1. Addition</p>
+						<form method="GET" style="margin-left: 40%;margin-right: 40%;margin-top: 10%;margin-bottom: 5%">
+						<input type="text" name="addx" id="id_q" placeholder="X" >
+						<input type="text" name="addy" id="id_q" placeholder="Y" >
+							<p>The Sum is {{ totaladd }}</p>
+						<button type="submit">send</button>
+						</form>
+					</div>
+
+						<div id="circle" class="tabcontent">
+
+						  <p>2. Subtraction</p>
+							<form method="GET" style="margin-left: 40%;margin-right: 40%;margin-top: 10%;margin-bottom: 5%">
+								<input type="text" name="subx" id="id_q" placeholder="X" >
+								<input type="text" name="suby" id="id_q" placeholder="Y" >
+								<p>The Difference is {{ totalsub }}</p>
+								<button type="submit">send</button>
+							</form>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="popup4" class="overlay">
+	<div class="popup">
+		<h2>Here i am</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			Thank to pop me out of that button, but now i'm done so you can close this window.
+		</div>
+	</div>
+</div>
+<div id="popup5" class="overlay">
+	<div class="popup">
+		<h2>Here i am</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			Thank to pop me out of that button, but now i'm done so you can close this window.
+		</div>
+	</div>
+</div>
+<div id="popup6" class="overlay">
+	<div class="popup">
+		<h2>Here i am</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			TEst
+		</div>
+	</div>
+</div>
+				</div>
+
+
+		<!-- Scripts -->
+			<script src={%static "assets/js/jquery.min.js" %}></script>
+
+			<script src={%static "assets/js/box.js" %}></script>
+        <script type="text/javascript">
+			$(document).ready(function() {
+    		$(window.location.hash).modal("show");
+			});
+			function allowDrop(ev) {
+          ev.preventDefault();
+        }
+function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+
+        }
+
+function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+          alert(data)
+
+          var data = {'x': data, 'X-csrfToken': csrftoken};
+			$.get(data);
+        }
+            </script>
+	<script type="text/javascript">
+
+
+
+	</script>
+
+	</body>
+</html>
