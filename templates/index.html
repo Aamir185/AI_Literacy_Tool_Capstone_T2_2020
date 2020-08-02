@@ -9,15 +9,17 @@
             }
         </style>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href={%static "main.css" %}>
-        
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+        <link rel="stylesheet" href={%static "main.css" %}>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+              crossorigin="anonymous">
     </head>
+
     <body>
         <div class="wrapper">
             <div class="sitelogo">
-              <img src={%static "images/newlogo.png" %}>
+              <img src={%static "images/newlogo.png" %} >
             </div>
         
             <div class="box">
@@ -37,14 +39,27 @@
             <div class="w3-container">
                 <div class="w3-display-container" style="height: 400px;">
                     <div class="w3-display-topleft" style="height: 30%;width: 30%;">
-                        <div class="w3-panel w3-card w3-red" ><h3 style="font-size: 20px;"><b>WHAT IS AI?</b></h3><p style="font-size: 18px;text-align:justify;"><img style="height: 100px;width:100px;float: left;" src={%static "images/giphy.gif" %} > Artificial intelligence (AI) is wide-ranging branch of computer science concerned with building smart machines capable of performing tasks that typically require human intelligence.</p></div>
+                        <div class="w3-panel w3-card w3-red" >
+                            <h3 style="font-size: 20px;"><b>WHAT IS AI?</b></h3>
+                            <p style="font-size: 18px;text-align:justify;">
+                                <img style="height: 100px;width:100px;float: left;"
+                                     src={%static "images/giphy.gif" %} > Artificial intelligence (AI) is
+                                wide-ranging branch of computer science concerned with building smart machines capable
+                                of performing tasks that typically require human intelligence.</p></div>
                     </div> 
                     
                     <div class="w3-display-topright" style="height: 30%;width: 30%;">
-                        <div class="w3-panel w3-card w3-Pale-blue" ><h3 style="text-align: center;">FEATURES OF AI</h3>
+                        <div class="w3-panel w3-card w3-Pale-blue" >
+                            <h3 style="text-align: center;">FEATURES OF AI</h3>
                             <div style="margin-left: 45px;">
-                            <p style="font-size: 20px;">1.Deep Learning &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.Quantum Computer</p><img style="height: 200px;width:200px;float: left;"  src={%static "images/deeplearning.gif" %} >&nbsp;&nbsp;&nbsp;&nbsp;<img style="height: 200px;width:200px;" src={%static "images/quant.gif" %} >
-                            <p style="font-size: 20px;">3.Facial Recognition &nbsp;&nbsp;&nbsp;4.Cloud Computing</p><img style="height: 200px;width:200px;" src={%static "images/facial.gif" %} >&nbsp;&nbsp;&nbsp;&nbsp;
+                            <p style="font-size: 20px;">1.Deep Learning &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                2.Quantum Computer</p>
+                                <img style="height: 200px;width:200px;float: left;"
+                                     src={%static "images/deeplearning.gif" %} >&nbsp;&nbsp;&nbsp;&nbsp;
+                                <img style="height: 200px;width:200px;" src={%static "images/quant.gif" %} >
+                            <p style="font-size: 20px;">3.Facial Recognition &nbsp;&nbsp;&nbsp;
+                                4.Cloud Computing</p>
+                                <img style="height: 200px;width:200px;" src={%static "images/facial.gif" %} >&nbsp;&nbsp;&nbsp;&nbsp;
                             <img style="height: 200px;width:200px;" src={%static "images/cloudcomputing.gif" %} >
                             </div>
                             <br><br>
@@ -55,23 +70,26 @@
                     <div class="w3-display-middle" style="height: 40%;width: 30%;">
                         <div class="w3-panel w3-card w3-black" >
                             <h3 style="text-align: center;">INTRODUCTION TO AI LITERACY TOOL</h3>
-                            <video width="525px" height="300px" controls style="padding-bottom:70px;" poster={%static "images/newlogo.png" %}>
-                            <source type="video/mp4" src={%static "video/bbb.mp4" %} >
-                            
-                            
-                            </video>
+                            <video width="525px" height="300px"
+                                   controls style="padding-bottom:70px;" poster={%static "images/newlogo.png" %}>
+                            <source type="video/mp4" src={%static "video/bbb.mp4" %} ></video>
                         </div>
                     </div>
                     
                     <div class="w3-display-bottomleft" style="height: 30%;width: 30%;">
-                        <div class="w3-panel w3-card w3-lime" ><h3 style="text-align: center;">APPLICATIONS OF AI</h3>
+                        <div class="w3-panel w3-card w3-lime" >
+                            <h3 style="text-align: center;">APPLICATIONS OF AI</h3>
                             <div style="margin-left: 10px;">
-                            <p style="font-size: 18px;">1.Apple Siri &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.Google home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.Tesla Cars</p><img style="height: 150px;width:150px;float: left;" src={%static "images/siri.gif" %} >&nbsp;&nbsp;&nbsp;&nbsp;<img style="height: 150px;width:150px;" src={%static "images/googlehome.gif" %} >&nbsp;&nbsp;&nbsp;<img style="height: 150px;width:150px;" src={%static "images/tesla.gif" %} >
+                            <p style="font-size: 18px;">1.Apple Siri &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                2.Google home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                3.Tesla Cars</p>
+                                <img style="height: 150px;width:150px;float: left;" src={%static "images/siri.gif" %} >&nbsp;&nbsp;&nbsp;&nbsp;
+                                <img style="height: 150px;width:150px;" src={%static "images/googlehome.gif" %} >&nbsp;&nbsp;&nbsp;
+                                <img style="height: 150px;width:150px;" src={%static "images/tesla.gif" %} >
                             </div>
                             <br><br>
                          </div>
                         </div>
-                
                     <button class="button button3" style="margin-top:0%;margin-left: 38%"><a href="/aipipeline"><b>Explore More</b></button>
                 </div>
                 
