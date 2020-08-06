@@ -30,7 +30,7 @@ This project has a few prerequisites which have to be first installed to set up 
 * To manually add packages:
 
 ```
-File > Settings > Project:AI-Literacy-Tool-2020.. > Python Interpreter to manually add packages.
+File > Settings > Project:AI-Literacy-Tool-2020.. > Python Interpreter
 ```
 
 * Add using terminal in PyCharm or command prompt:
