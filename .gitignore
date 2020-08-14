@@ -1,2 +1,5 @@
 Archive/venv
 .idea/*
+AI_Literacy_App/__pycache__/*
+AI_Literacy_App/migrations/*
+core/__pycache__/*
