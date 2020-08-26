@@ -26,6 +26,9 @@
 	<link rel="stylesheet" href={%static "css/style.css" %}>
 	<link rel="stylesheet" href={%static "css/style2.css" %}>
 
+	<!-- Theme style  -->
+	<link rel="stylesheet" href={%static "css/style_user.css" %}>
+
 	<!-- Modernizr JS -->
 	<script src={%static "js/modernizr-2.6.2.min.js" %}></script>
 	<!-- FOR IE9 below -->
@@ -34,8 +37,7 @@
 	<![endif]-->
 
 	</head>
-	<body>
-		
+	<body>		
 	<div class="gtco-loader"></div>
 	
 	<div id="page">
@@ -45,14 +47,14 @@
 				
 				<div class="row">
 					<div class="col-sm-2 col-xs-12">
-						<div id="gtco-logo"><a href=""><img src={%static "images/logo.png" %} alt="Free HTML5 Website Template by FreeHTML5.co"></a></div>
+						<div id="gtco-logo"><a href="/"><img src={%static "images/logo.png" %} alt="Free HTML5 Website Template by FreeHTML5.co"></a></div>
 					</div>
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
 							<li class="active"><a href="">Home</a></li>
-							<li><a href="#">About</a></li>
+							<li><a href="examples/">Examples</a></li>
 							
-							<li><a href="#">Contact</a></li>
+							<li><a href="#">About Us</a></li>
 						</ul>
 					</div>
 				</div>
@@ -71,8 +73,9 @@
 										<img src={%static "images/cube.png" %} alt="Free HTML5 Website Template by FreeHTML5.co">
 									</div>
 									<div class="col-md-7 copy animate-box">
-										<h1>AI LITERACY TOOLS FOR CHILDREN'S</h1>
-										<p>A Site where they can learn how to use Artifical intelligence and Machine learning piplens.</p>
+										<h1>AI LITERACY TOOL FOR CHILDREN</h1>
+										<p>A place for kids to learn about the exciting world of Artificial Intelligence (AI)
+										and Data Science in a fun and engaging way! </p>
 										<p><a href="#" target="_blank" class="btn btn-white">Learn More</a></p>
 									</div>
 								</div>
@@ -90,26 +93,43 @@
 					<div class="col-md-8 col-md-offset-2 gtco-heading text-center">
 						<h2>What is Data and How it works ?.</h2><br>
 						
-						<p><a href="=" class="btn btn-special popup-vimeo">Watch The Video</a></p>
+						<p><a href="https://www.youtube.com/watch?v=pg12U1BAnoA" class="btn btn-special popup-vimeo">Watch The Video</a></p>
 					</div>
 				</div>
 				<div class="row row-pb-md">
-					<div class="col-md-4 col-sm-4 service-wrap">
-						<div class="service">
+					<div id="desc-block" class="col-md-4 col-sm-4 service-wrap">
+						<div class="service" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
 							<h3><i class="ti-pie-chart"></i> What is AI ?</h3>
-							<p>Artificial intelligence (AI) is wide-ranging branch of computer science concerned with building smart machines capable of performing tasks that typically require human intelligence.</p>
+							<p>
+								Artificial intelligence (AI) is wide-ranging branch of computer science concerned with
+								building smart machines capable of performing tasks that typically require human intelligence.
+								Every day, technology around us keeps getting smarter, from beating us in our own games
+								to outperforming us in cognitive tasks, all of which has been made possible because of AI.
+							</p>
 						</div>
 					</div>
-					<div class="col-md-4 col-sm-4 service-wrap">
-						<div class="service animate-change">
+					<div id="desc-block" class="col-md-4 col-sm-4 service-wrap">
+						<div class="service" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
 							<h3><i class="ti-ruler-pencil"></i> Applications of AI ?</h3>
-							<p>1.Apple Siri <br>       2.Google home   <br>  3.Tesla Cars</p>
+							<p>
+								1. Entertainment: Netflix, Amazon recommendation systems. <br>
+								2. Communication: Chatbots, Personal Assistants (Siri, Cortana) <br>
+								3. Gaming: Strategic games such as Chess, Go. <br>
+								4. Automotive: Self-driven cars, Intelligent virtual assistants. <br>
+								5. Healthcare: Better and faster diagnosis of diseases, selection of vaccine candidates.
+							</p>
 						</div>
 					</div>
-					<div class="col-md-4 col-sm-4 service-wrap">
-						<div class="service">
-							<h3><i class="ti-settings"></i> Features of AI ?</h3>
-							<p>1.Deep Learning <br>       2.Quantum Computer</p>
+					<div id="desc-block" class="col-md-4 col-sm-4 service-wrap">
+						<div class="service" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+							<h3><i class="ti-settings"></i> Future of AI ?</h3>
+							<p>
+								1. Revolutionize Human Resources and Recruiting by relying on analytical data and
+								eliminating discrimination on the basis of gender, age and race. <br>
+								2. Language barriers can be permanently removed by instant speech translation. <br>
+								3. Improve road safety through autonomous vehicles. <br>
+								4. Increased processing powers and efficiency by incorporating Quantum Computing.
+							</p>
 						</div>
 					</div>
 
@@ -138,10 +158,18 @@
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">Gathering Data</h3>
-										<span class="company">information----</span>
+										<span class="company">The first pre-processing step which involves identifying and collecting
+											relevant data.
+										</span>
 									</div>
 									<div class="timeline-body">
-										<p>information----</p>
+										<p class="text-justify">This is perhaps the most important step in data pre-processing and directly impacts 
+											the performance and complexity of further tasks. If you are given the task of planning 
+											the best holiday trip, the first thing you might consider doing is gathering information 
+											such as the duration, location, timing etc of the holiday. Based on this, you would collect 
+											data about possible holiday destinations matching this criteria. The more precise and relevant
+											data you capture, the better chances of you planning the most happening holiday.
+									 </p>
 									</div>
 								</div>
 							</li>
@@ -150,10 +178,14 @@
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">Preparing that Data</h3>
-										<span class="company">information----</span>
+										<span class="company">Processing the data to make it ideal for processing though a machine.</span>
 									</div>
 									<div class="timeline-body">
-										<p>information----</p>
+										<p class="text-justify">Once you have gathered the information about possible holiday destination, you can edit it 
+											to make it easy for a machine to understand it. Example: If you are capturing the address, 
+											it is best to split it up into street addrees, post code, state, country to make it easier 
+											for the machine to understand which is which.
+										</p>
 									</div>
 								</div>
 							</li>
@@ -162,10 +194,12 @@
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">Choosing a Model</h3>
-										<span class="company">information----</span>
+										<span class="company">Choosing an appropriate ML model based on the objective and data.</span>
 									</div>
 									<div class="timeline-body">
-										<p>information----</p>
+										<p class="text-justify">This can be imagined as a software where you upload the data you got and it will tell
+											you which is the best holiday destination for you from the data.
+										</p>
 									</div>
 								</div>
 							</li>
@@ -179,10 +213,14 @@
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">Training of Data</h3>
-										<span class="company">information----</span>
+										<span class="company">The chosen model is trained with known data to help it learn.</span>
 									</div>
 									<div class="timeline-body">
-										<p>information----</p>
+										<p class="text-justify">For the machine to be able to help you in choosing the best holdiay destination, it is 
+											important for it to understand your preferences. During training, you tell the machine
+											about the holiday destination you have been to and how your experience was. But don't tell
+											the machine about all of your holidays, you must save some for the next part.
+										</p>
 									</div>
 								</div>
 							</li>
@@ -191,10 +229,17 @@
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">Evaluation</h3>
-										<span class="company">information----</span>
+										<span class="company">Evaluate the model performance by feeding it data with known labels and 
+											compare the result.
+										</span>
 									</div>
 									<div class="timeline-body">
-										<p>information----</p>
+										<p class="text-justify">Now that you have informed the machine about your experiences, how do we know if it has 
+											actually learned? We confirm it by testing it's knowledge. Remember the few holidays about which
+											you didn't tell the machine when it was learning? We tell those machine but instead of telling
+											it how you experience was, we ask the machine to predict it. If the machine's prediction is same as 
+											your experience, we can assume it has learnt your pereferences.
+										</p>
 									</div>
 								</div>
 							</li>
@@ -202,11 +247,15 @@
 								<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
-										<h3 class="timeline-title">Hyperparameter Tunning</h3>
-										<span class="company">information----</span>
+										<h3 class="timeline-title">Prediction</h3>
+										<span class="company">The model now utilized what it has learnt from training data to make predictions
+											about unseen data.
+										</span>
 									</div>
 									<div class="timeline-body">
-										<p>information----</p>
+										<p class="text-justify">Finally, we ask the software to tell you which of the possible destinations is the best for you so
+											that you can pack your bags and head out for the best vacaction ever.
+										</p>
 									</div>
 								</div>
 							</li>
@@ -214,11 +263,15 @@
 								<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
-										<h3 class="timeline-title">PREDICTION</h3>
-										<span class="company">information----</span>
+										<h3 class="timeline-title">Hyperparameter Tunning</h3>
+										<span class="company">Tune the hyper-parameters of the model to improve model performance.</span>
 									</div>
 									<div class="timeline-body">
-										<p>information----</p>
+										<p class="text-justify">Before you head out on your vacaction, how about some final tweaks to ensure the predicted 
+											destination is the indeed the best. You basically be more precise about your preferences such as 
+											your ideal budget, your preferred region for vaction and feed this to the software to help it
+											ensure the best possible prediction for you.
+										</p>
 									</div>
 								</div>
 							</li>
@@ -249,9 +302,11 @@
 	<!-- Main -->
 	<script src={%static "js/main.js" %}></script>
 	<script src={%static "js/main2.js" %}></script>
+	<script src={%static "js/user_main.js" %}></script>
 	<script src={%static "js/jquery.stellar.min.js" %}></script>
 	<!-- Easy PieChart -->
 	<script src={%static "js/jquery.easypiechart.min.js" %}></script>
 	</body>
+
 </html>
 
