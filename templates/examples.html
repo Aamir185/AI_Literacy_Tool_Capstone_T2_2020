@@ -35,7 +35,6 @@
         <!--[if lt IE 9]>
         <script src={%static "js/respond.min.js" %}></script>
         <![endif]-->
-    
     </head>
 	<body>
 		
@@ -82,8 +81,19 @@
 				</div>
 			</div>
         </header>
-        
+        <!-- Sidebar code -->
+        <div id="mySidebar" class="sidebar">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <a href="#"><img src="/static/images/e1_cover_image.jpg" width="195" height="140"></a>
+          <a href="#"><img src="/static/images/e2_cover_image.jpg" width="195" height="140"></a>
+          <a href="#"><img src="/static/images/e3_cover_image.jpg" width="195" height="140"></a>
+        </div>
 
+        <!-- This button can be added in the main content of the example page-->
+        <div id="main">
+          <button class="openbtn" onclick="openNav()">☰</button>
+        </div>
+        <!-- End of Sidebar -->
     </div>
     <!--boxes-->			
     <div class="gtco-section gtco-products" >
@@ -161,6 +171,7 @@
 	<script src={%static "js/jquery.stellar.min.js" %}></script>
 	<!-- Easy PieChart -->
 	<script src={%static "js/jquery.easypiechart.min.js" %}></script>
-
+    <!-- SideBar Script -->
+    <script src={%static "js/sidebar.js" %}></script>
 	</body>
 </html>
