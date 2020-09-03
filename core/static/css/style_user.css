@@ -1,3 +1,109 @@
 .col-md-4#desc-block{
     height: 100%
 }
+
+.row.modules{
+    margin-left: 155px;
+    width: fit-content;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border: 3px dashed gray;
+}
+
+.row.used-modules{
+    margin-left: 155px;
+    width: fit-content;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border: 3px dashed gray;
+}
+
+.row.modules div{
+    background-color: rgb(252, 86, 86);
+    height: 150px;
+    width: 180px;
+    margin: 8px;
+    z-index: 5;
+    border-radius: 20%;
+    
+}
+
+.row.interactions .interact-col{
+    height: 350px;
+    width: 32%;
+    margin: 8px;
+    border: 3px dashed gray;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.interact-col .image-holder{
+    height: 90%;
+    width: auto;
+    padding: 2px;
+}
+
+.image-holder img{
+    height: 100%;
+    width: 100%;
+}
+
+.row.interactions #drop-block{
+    width: 20%;
+    margin-left: 40px;
+    margin-right: 40px;
+    background: white url(../images/robot.png) no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.8;
+}
+
+#module-container h5{
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 21px;
+    color: white;
+}
+#module-container span{
+    color: white;
+}
+
+.row.interactions .ui-droppable{
+    width: 35%;
+}
+
+.gtco-cover.gtco-cover-xs.gtco-inner.age-example{
+    height: 150px;
+}
+
+.gtco-cover.gtco-cover-xs.gtco-inner.age-example .display-t{
+    height: 150px;
+}
+
+.row.used-modules div{
+    background-color: white;
+    height: 150px;
+    width: 180px;
+    margin: 8px;
+    z-index: -1;
+    border-radius: 20%;
+}
+
+/*
+.gtco-section.gtco-products.gtco-example{
+     background: #17B794;
+}*/
+
+/* Dragging effects */
+
+#module-container .ui-draggable-dragging{
+    box-shadow: 0 0 0 6px rgb(42, 42, 43);
+}
+
+/*Button*/
+button-wrap{
+    height: auto;
+    width: auto;
+}
