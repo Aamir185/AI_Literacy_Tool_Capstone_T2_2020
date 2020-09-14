@@ -68,17 +68,17 @@ if __name__ == "__main__":
     positive_tokens_for_model = get_tweets_for_model(positive_cleaned_tokens_list)
     negative_tokens_for_model = get_tweets_for_model(negative_cleaned_tokens_list)
 
-    positive_dataset = [(tweet_dict, "Positive")
+    positive_dataset = [(tweet_dict, "Happy")
                          for tweet_dict in positive_tokens_for_model]
 
-    negative_dataset = [(tweet_dict, "Negative")
+    negative_dataset = [(tweet_dict, "Not Happy")
                          for tweet_dict in negative_tokens_for_model]
 
     dataset = positive_dataset + negative_dataset
 
     random.shuffle(dataset)
 
-    '''train_data = dataset[:7000]
+    train_data = dataset[:7000]
     test_data = dataset[7000:]
 
     classifier = NaiveBayesClassifier.train(train_data)
@@ -94,7 +94,8 @@ if __name__ == "__main__":
 
     custom_tokens = remove_noise(word_tokenize(custom_tweet))
 
-    print(custom_tweet, classifier.classify(dict([token, True] for token in custom_tokens)))'''
+    print(custom_tweet, classifier.classify(dict([token, True] for token in custom_tokens)))
+    '''
 
 
 
@@ -103,4 +104,4 @@ if __name__ == "__main__":
    # loaded_model = pickle.load(open("sent_model.sav", 'rb'))
    # result = loaded_model.classify(dict([token, True] for token in custom_tokens))
    # print(result)
-    print(dict([token, True] for token in custom_tokens))
+    print(dict([token, True] for token in custom_tokens))'''
