@@ -1889,7 +1889,7 @@ form label {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: rgb(0 0 0 / 76%);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -1919,10 +1919,14 @@ form label {
 .openbtn {
   font-size: 20px;
   cursor: pointer;
-  background-color: #111;
+  background-color: rgb(0 0 0 / 76%);
   color: white;
   padding: 10px 15px;
   border: none;
+}
+
+.openbtn-active{
+  border: 4px solid;
 }
 
 .openbtn:hover {
@@ -1932,7 +1936,6 @@ form label {
 #main {
   transition: margin-left .5s;
   padding: 16px;
-  position: absolute;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
