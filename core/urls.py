@@ -26,7 +26,9 @@ urlpatterns = [
     path('examples/', views.examples),
     path('examples/age_gender/', views.age_gender),
     path('examples/age_gender/image_upload/', views.image_upload_view),
-    path('examples/age_gender/run_module/', views.run_module)
+    path('examples/age_gender/run_module/', views.run_module),
+    path('examples/sentiment_analysis/', views.sentiment_analysis),
+    path('examples/sentiment_analysis/run_sentiment/', views.run_sentiment),
 
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 

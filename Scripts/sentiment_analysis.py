@@ -1,13 +1,17 @@
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.tag import pos_tag
 from nltk.tokenize import word_tokenize
-
-import re, string
+from nltk.corpus import twitter_samples
+from random import randint
+import re, string, os
 import pickle
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def remove_noise(tweet_tokens, stop_words = ()):
 
     cleaned_tokens = []
+    lemmatized_tokens = []
 
     for token, tag in pos_tag(tweet_tokens):
         token = re.sub('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+#]|[!*\(\),]|'\
@@ -23,18 +27,20 @@ def remove_noise(tweet_tokens, stop_words = ()):
 
         lemmatizer = WordNetLemmatizer()
         token = lemmatizer.lemmatize(token, pos)
-
+        lemmatized_tokens.append(token.lower())
         if len(token) > 0 and token not in string.punctuation and token.lower() not in stop_words:
             cleaned_tokens.append(token.lower())
-    return cleaned_tokens
+    return cleaned_tokens, lemmatized_tokens
 
-
-if __name__ == "__main__":
-
-    #custom_tweet = "I ordered just once from TerribleCo, they screwed up, never used the app again."
-    custom_tweet = "I ordered just once from TerribleCo, it was a good experince"
-    custom_tokens = remove_noise(word_tokenize(custom_tweet))
-    loaded_model = pickle.load(open("sent_model.sav", 'rb'))
+def getRandomTweet():
+    # Get a random tweet
+    tweets = twitter_samples.strings('tweets.20150430-223406.json')
+    return tweets[randint(0,len(tweets))]
+    
+def getSentiment(custom_tokens):
+     # Load saved model for detecting sentiment
+    saved_model = os.path.join(BASE_DIR, "Scripts\\sent_model.sav")
+    loaded_model = pickle.load(open(saved_model, 'rb'))
+    # run sentiment analysis
     result = loaded_model.classify(dict([token, True] for token in custom_tokens))
-    print(custom_tweet,"Sentiment: ",result)
-    #print(dict([token, True] for token in custom_tokens))
+    return result
