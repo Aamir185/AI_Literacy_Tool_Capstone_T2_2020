@@ -4,9 +4,10 @@ import cv2
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-face_detector = os.path.join(BASE_DIR, "Scripts\\face_detector")
-age_detector = os.path.join(BASE_DIR, "Scripts\\age_detector")
+print("***Printing log below***")
+print(BASE_DIR)
+face_detector = os.path.join(BASE_DIR, "Example_1\\face_detector")
+age_detector = os.path.join(BASE_DIR, "Example_1\\age_detector")
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True,
@@ -68,6 +69,6 @@ for i in range(0, detections.shape[2]):
 		#	cv2.FONT_HERSHEY_SIMPLEX, 0.8, (27, 154, 65), 2)
 
 #cv2.imshow("Image", image)
-output_path = os.path.join(BASE_DIR, "media\images\output\output_image.jpg")
+output_path = os.path.join(BASE_DIR, "..\media\images\output\output_image.jpg")
 cv2.imwrite(output_path, image)
 cv2.waitKey(0)

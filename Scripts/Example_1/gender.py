@@ -12,8 +12,8 @@ import re
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-face_detector = os.path.join(BASE_DIR, "Scripts\\face_detector")
-gender_detector = os.path.join(BASE_DIR, "Scripts\\gender_detector")
+face_detector = os.path.join(BASE_DIR, "Example_1\\face_detector")
+gender_detector = os.path.join(BASE_DIR, "Example_1\\gender_detector")
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
@@ -87,7 +87,7 @@ for i in range(0, detections.shape[2]):
 		text = "{}".format(age, ageConfidence * 100)
 		print("[INFO] {}".format(text))
 
-		img_output = cv2.imread(os.path.join(BASE_DIR, "media\images\output\output_image.jpg"))
+		img_output = cv2.imread(os.path.join(BASE_DIR, "..\media\images\output\output_image.jpg"))
 
 		# draw the bounding box of the face along with the associated
 		# predicted age
@@ -111,7 +111,7 @@ for i in range(0, detections.shape[2]):
 #print("[INFO] Image output is done, file path is \'{0}\'".format(output_filename))
 
 
-output_path = os.path.join(BASE_DIR, "media\images\output\output_image.jpg")
+output_path = os.path.join(BASE_DIR, "..\media\images\output\output_image.jpg")
 #cv2.imwrite(output_path, image)
 cv2.imwrite(output_path, img_output)
 cv2.waitKey(0)

@@ -39,7 +39,7 @@ def getRandomTweet():
     
 def getSentiment(custom_tokens):
      # Load saved model for detecting sentiment
-    saved_model = os.path.join(BASE_DIR, "Scripts\\sent_model.sav")
+    saved_model = os.path.join(BASE_DIR, "Example_2\\sent_model.sav")
     loaded_model = pickle.load(open(saved_model, 'rb'))
     # run sentiment analysis
     result = loaded_model.classify(dict([token, True] for token in custom_tokens))

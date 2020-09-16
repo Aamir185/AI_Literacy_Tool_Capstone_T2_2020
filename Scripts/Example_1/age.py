@@ -5,8 +5,8 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-face_detector = os.path.join(BASE_DIR, "Scripts\\face_detector")
-age_detector = os.path.join(BASE_DIR, "Scripts\\age_detector")
+face_detector = os.path.join(BASE_DIR, "Example_1\\face_detector")
+age_detector = os.path.join(BASE_DIR, "Example_1\\age_detector")
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True,
@@ -65,12 +65,12 @@ for i in range(0, detections.shape[2]):
 		#cv2.rectangle(image, (startX, startY), (endX, endY),
 		#	(27, 154, 65), 2)
 		# Read the existing output file
-		img_output = cv2.imread(os.path.join(BASE_DIR, "media\images\output\output_image.jpg"))
+		img_output = cv2.imread(os.path.join(BASE_DIR, "..\media\images\output\output_image.jpg"))
 
 		cv2.putText(img_output, text, (startX-120, y),
 			cv2.FONT_HERSHEY_SIMPLEX, 1.2, (50, 41, 250), 2)
 
 #cv2.imshow("Image", image)
-output_path = os.path.join(BASE_DIR, "media\images\output\output_image.jpg")
+output_path = os.path.join(BASE_DIR, "..\media\images\output\output_image.jpg")
 cv2.imwrite(output_path, img_output)
 cv2.waitKey(0)
