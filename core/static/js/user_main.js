@@ -17,13 +17,13 @@ $("#module-container div").draggable({
     stack: '#module-container div',
     cursor: 'move',
     revert: true
-})
+});
 
 $("#drop-block").droppable({
     accept: '#module-container div',
     cursor: 'hovered',
     drop: handleDrop
-})
+});
 
 var mod_no = 1
 var image_name = ""
@@ -37,12 +37,16 @@ function handleDrop(event, ui){
 
     var check = correct_module.localeCompare(dragged_module)
 
+    if(correct_module == "module-3" && dragged_module == "module-4" || correct_module == "module-4" && dragged_module == "module-3"){
+        check = 0
+    }
+
     if(check == 0){
         
         //console.log("used-"+dragged_module);
         ui.draggable.position( { of: $("#used-"+dragged_module), my: 'left top', at: 'left top' } );
         ui.draggable.draggable( 'option', 'revert', false );
-        module = module_names[mod_no-1]
+        module = module_names[dragged_module.match(/\d+/)[0] - 1]
         mod_no += 1
         
         $.ajax({
@@ -94,4 +98,110 @@ $("#image_to_upload").on("change", function(){
 			});
         }
     	
-})
+});
+
+function getRandomTweet(){
+    $.ajax({
+        method: "GET",
+        url:"run_sentiment",
+        dataType: "text",
+        beforeSend: function(){
+            $("#loader-1").show();
+        },
+        success: function(data){
+            $("#loader-1").hide();
+            console.log("All GOOD");
+            $('#tweet-loc').html(data);
+        },
+        error: function(data){
+            console.log("There was an error");
+            console.log(data);
+        }
+    });
+};
+
+$("#sentiment-mod-container div").draggable({
+    containment: '#example-container',
+    stack: '#sentiment-mod-container div',
+    cursor: 'move',
+    revert: true
+});
+
+$("#sentiment-drop-block").droppable({
+    accept: '#sentiment-mod-container div',
+    cursor: 'hovered',
+    drop: handleSentimentDrop
+});
+
+var mod_no = 1
+var sentiment = "";
+var tokenized, lemmatized, cleaned = [];
+var ajaxFlag = false;
+var response = [];
+
+function handleSentimentDrop(event, ui){
+    var correct_module = "module-"+mod_no;
+    var dragged_module = $(ui.draggable).attr("id"); 
+
+    var check = correct_module.localeCompare(dragged_module)
+
+    if(check == 0){
+        
+        ui.draggable.position( { of: $("#used-"+dragged_module), my: 'left top', at: 'left top' } );
+        ui.draggable.draggable( 'option', 'revert', false );
+        if(!ajaxFlag){
+            $.ajax({
+                method: "POST",
+                url:"run_sentiment/",
+                async: false,
+                data:{
+                    tweet: $("#tweet-loc").val()
+                },
+                dataType: "json",
+                success: function(data){
+                    ajaxFlag = true;
+                    tokenized = data.tokenized;
+                    lemmatized = data.lemmatized;
+                    cleaned = data.cleaned;
+                    sentiment = data.sentiment;
+                    console.log(ajaxFlag, "All GOOD");
+                },
+                error: function(data){
+                    console.log("There was an error");
+                    console.log(data);
+                }
+            });
+        }
+        if(mod_no == 1){
+            response = tokenized;
+        }
+        else if(mod_no == 2){
+            response = lemmatized;
+        }
+        else if(mod_no == 3){
+            response = cleaned;
+        }
+        else{
+            response = sentiment;
+        }
+        
+        if(mod_no != 4){
+            $('#list-holder').html("<ul id='newList' class='list-inline token'></ul>");
+            for (cnt = 0; cnt < response.length; cnt++) {
+                $("#newList").append("<li class='list-inline-item token'>"+response[cnt]+"</li>");
+            }
+        }
+        else{
+            if(sentiment == "Happy"){
+                $("#sentiment-holder").html("<h3 class='text-success'>Sentiment: Happy &#128512;");
+            }
+            else{
+                $("#sentiment-holder").html("<h3 class='text-danger'>Sentiment: Unhappy &#128542;");
+            }
+        }
+
+        mod_no += 1;
+
+    }
+}
+
