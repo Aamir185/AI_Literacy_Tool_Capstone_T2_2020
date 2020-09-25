@@ -39,6 +39,8 @@ blob = cv2.dnn.blobFromImage(image, 1.0, (300, 300),
 faceNet.setInput(blob)
 detections = faceNet.forward()
 
+img_output = cv2.imread(os.path.join(BASE_DIR, "..\media\images\output\output_image.jpg"))
+
 for i in range(0, detections.shape[2]):
 	confidence = detections[0, 0, i, 2]
 
@@ -65,9 +67,8 @@ for i in range(0, detections.shape[2]):
 		#cv2.rectangle(image, (startX, startY), (endX, endY),
 		#	(27, 154, 65), 2)
 		# Read the existing output file
-		img_output = cv2.imread(os.path.join(BASE_DIR, "..\media\images\output\output_image.jpg"))
-
-		cv2.putText(img_output, text, (startX-120, y),
+		
+		cv2.putText(img_output, text, (startX-100, y),
 			cv2.FONT_HERSHEY_SIMPLEX, 1.2, (50, 41, 250), 2)
 
 #cv2.imshow("Image", image)
