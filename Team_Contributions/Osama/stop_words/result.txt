@@ -1,0 +1,5 @@
+Result before removing stop words: 
+Hello Mr. Smith , how are you doing today ? The weather is great , and city is awe some . The sky is pinkish-blue . You should n't eat cardboard 
+
+Result after removing stop words: 
+Hello Mr. Smith , today ? The weather great , city awe . The sky pinkish-blue . You n't eat cardboard 
