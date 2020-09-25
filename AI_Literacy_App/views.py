@@ -8,7 +8,7 @@ import os, sys
 import subprocess
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(1, os.path.join(BASE_DIR, "Scripts"))
+sys.path.insert(1, os.path.join(BASE_DIR, "Scripts\\Example_2"))
 
 import sentiment_analysis as sent
 
@@ -58,7 +58,7 @@ def run_module(request):
         if(module == "face"):
             #face_detector = scripts_path+"\\face_detector"
             #age_detector = scripts_path+"\\age_detector"
-            command = 'python "'+scripts_path+'\\face.py" '+'--image "'+input_path + image_name + '"'
+            command = 'python "'+scripts_path+'\\Example_1\\face.py" '+'--image "'+input_path + image_name + '"'
             print(command)
             try:
                 subprocess.call(command)
@@ -68,7 +68,7 @@ def run_module(request):
 
 
         elif(module == "features"):
-            command = 'python "'+scripts_path+'\\features.py" '+'--image "'+input_path + image_name + '"'
+            command = 'python "'+scripts_path+'\\Example_1\\features.py" '+'--image "'+input_path + image_name + '"'
             print(command)
             try:
                 subprocess.call(command)
@@ -78,7 +78,7 @@ def run_module(request):
         
 
         elif(module == "age"):
-            command = 'python "'+scripts_path+'\\age.py" '+'--image "'+input_path + image_name + '"'
+            command = 'python "'+scripts_path+'\\Example_1\\age.py" '+'--image "'+input_path + image_name + '"'
             print(command)
             try:
                 subprocess.call(command)
@@ -87,7 +87,7 @@ def run_module(request):
                 return JsonResponse({'error': 'True'})
 
         else:
-            command = 'python "'+scripts_path+'\\gender.py" '+'--image "'+input_path + image_name + '"'
+            command = 'python "'+scripts_path+'\\Example_1\\gender.py" '+'--image "'+input_path + image_name + '"'
             print(command)
             try:
                 subprocess.call(command)
