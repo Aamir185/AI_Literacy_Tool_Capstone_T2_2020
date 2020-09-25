@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/hint.css">
+    
+    
+        <!-- Icomoon Icon Fonts-->
+        <link rel="stylesheet" href="css/icomoon.css">
+        <!-- Themify Icons-->
+        <link rel="stylesheet" href="css/themify-icons.css">
+        <!-- Bootstrap  -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+    
+        <!-- Magnific Popup -->
+        <link rel="stylesheet" href="css/magnific-popup.css">
+    
+        <!-- Owl Carousel  -->
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/box.css">
+        <!-- Theme style  -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style2.css">
+    
+        <!-- Theme style  -->
+        <link rel="stylesheet" href="css/style_user.css">
+    
+        <!-- Modernizr JS -->
+        <script src="js/modernizr-2.6.2.min.js"></script>
+        <!-- FOR IE9 below -->
+        <!--[if lt IE 9]>
+        <script src={%static "js/respond.min.js" %}></script>
+        <![endif]-->
+    
+    </head>
+    <body>
+
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            
+        </div>
+        <nav class="gtco-nav" role="navigation">
+			<div class="gtco-container">
+				
+				<div class="row">
+					<div class="col-sm-2 col-xs-12">
+						<div id="gtco-logo"><a href="/"><img src="images/logo.png" alt="SurroundAI"></a></div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li class="active"><a href="#">Examples</a></li>
+							
+							<li><a href="#">About Us</a></li>
+							
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+        </nav>
+        
+        <header id="gtco-header" class="container-fluid" role="banner">
+            
+            <div class="container">
+                <h1 style="align-content: center;margin-top: 20px;text-align: center;">
+                    Age & Gender Detection
+                </h1>
+            </div>
+            
+        </header>
+
+        <div class="gtco-section gtco-products gtco-example">
+            <!-- Sidebar code -->
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="#"><img src="images/e1_cover_image.jpg" width="195" height="140"></a>
+                <a href="#"><img src="images/e2_cover_image.jpg" width="195" height="140"></a>
+                <a href="#"><img src="images/e3_cover_image.jpg" width="195" height="140"></a>
+            </div>
+    
+            <!-- This button can be added in the main content of the example page-->
+            <div id="main">
+                
+                <button class="openbtn" onclick="checkNav()">☰</button>
+            </div>
+            <!-- End of Sidebar -->
+           
+            <a class="hint" data-hint="hint should be here" target="_blank" ><img  src="./images/hint.png"></a>
+            <div id = "example-container" class="gtco-container">
+                
+                 
+                <!--First row for the modules-->
+                <div id = "module-container" class="row modules">
+                    <div id = "module-1" class="col-md-3 col-sm-3 ui-draggable ui-draggable-handle">
+                        <h5>Detect Face</h5>
+                        <span>Drag this block on the robot to teach it to detect a face.</span>
+                    </div>
+                    <div id = "module-2" class="col-md-3 col-sm-3 ui-draggable ui-draggable-handle">
+                        <h5>Detect Features</h5>
+                        <span>Drag this block on the robot to teach it to detect facial features.</span>
+                    </div>
+                    <div id = "module-3" class="col-md-3 col-sm-3 ui-draggable ui-draggable-handle">
+                        <h5>Detect Age</h5>
+                        <span>Drag this block on the robot to teach it to detect age.</span>
+                    </div>
+                    <div id = "module-4" class="col-md-3 col-sm-3 ui-draggable ui-draggable-handle">
+                        <h5>Detect Gender</h5>
+                        <span>Drag this block on the robot to teach it to detect gender.</span>
+                    </div>
+                </div>
+                <div class="blockheading">
+                    <h3 style="text-align:center;">CHOOSE ONE OF THE ABOVE BLOCKS</h3>
+                </div>
+                <!--First row for the interactions-->
+                
+                <div class="row interactions" style="margin-left: 50px;">
+                    <div class="col-md-4 col-sm-4 interact-col">
+                        <div class="image-holder">
+                            <img id="image_preview" src="media/images/initial/output_image.jpg" alt="Chosen Image"> 
+                        </div>
+                        <div class="button-wrap">
+                            <div class="button-group">
+                                <form id="imageUploadForm" method = "post" action = "image_upload/"  enctype="multipart/form-data">
+                                    <input type="file" id = "image_to_upload"/>
+                                </form>
+                            </div>
+                        </div>  
+                    </div>
+                    <div id = "drop-block" class="col-md-4 col-sm-4 interact-col ui-droppable">
+                        
+                    </div>
+                    <div class="col-md-4 col-sm-4 interact-col">
+                        <div class="image-holder" style="height: 100%;">
+                            <img id="image_output" src="media/images/output/initial_image.jpg" alt="Output Image"> 
+                        </div>
+                    </div>
+                </div>
+                <!--First row for the used-modules-->
+                <div class="row used-modules">
+                    <div id = "used-module-1" class="col-md-3 col-sm-3 ui-draggable ui-draggable-handle"></div>
+                    <div id = "used-module-2" class="col-md-3 col-sm-3 ui-draggable ui-draggable-handle"></div>
+                    <div id = "used-module-3" class="col-md-3 col-sm-3 ui-draggable ui-draggable-handle"></div>
+                    <div id = "used-module-4" class="col-md-3 col-sm-3 ui-draggable ui-draggable-handle"></div>
+                </div>
+                <div class="row" style="text-align: center;">
+                    <div class="reset btn-wrapper">
+                        <button class="btn" onclick="location.reload(true);">Reset</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        
+
+
+    <!-- END -->
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery -->
+	<script src="js/jquery-ui.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+	<script src="js/main2.js"></script>
+	<script src="js/user_main.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Easy PieChart -->
+    <script src="js/jquery.easypiechart.min.js"></script>
+    <!-- SideBar Script -->
+    <script src="js/sidebar.js"></script>
+    <script src="js/box.js"></script>
+    </body>
+
+</html>

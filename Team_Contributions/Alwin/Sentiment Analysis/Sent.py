@@ -71,7 +71,7 @@ if __name__ == "__main__":
     positive_dataset = [(tweet_dict, "Happy")
                          for tweet_dict in positive_tokens_for_model]
 
-    negative_dataset = [(tweet_dict, "Sad")
+    negative_dataset = [(tweet_dict, "Unhappy")
                          for tweet_dict in negative_tokens_for_model]
 
     dataset = positive_dataset + negative_dataset
