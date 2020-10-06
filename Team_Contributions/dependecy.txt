@@ -1,0 +1,19 @@
+GitHub Desktop
+Python 3.8.2 (64 bit)
+Visual Studio (64 bit)
+Install Dependecies
+Django
+numpy
+Install nltk
+Pillow: python -m pip install pillow
+
+numpy
+CV2: pip install opencv-python
+
+installed cmake: https://cmake.org/download/
+pip install cmake
+pip install dlib
+
+
+
+
